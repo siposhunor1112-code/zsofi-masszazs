@@ -1,0 +1,36 @@
+body.admin { padding-bottom: 0; }
+.admin-head { border-bottom: 1px solid var(--line); background: var(--surface); }
+.admin-head-inner { height: 68px; display: flex; align-items: center; justify-content: space-between; }
+.admin-main { padding-top: 32px; padding-bottom: 64px; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(20px, 4vw, 32px); margin-bottom: 24px; box-shadow: var(--shadow); }
+.card h1, .card h2 { font-size: 30px; margin-bottom: 16px; }
+.card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.check.small { font-size: 13px; }
+
+.login { max-width: 400px; margin: 8vh auto; }
+.login .field { margin-bottom: 16px; }
+
+.day-group { margin-top: 20px; }
+.day-group h3 { font-family: var(--sans); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--clay); font-weight: 600; margin-bottom: 8px; }
+
+.row { display: grid; grid-template-columns: 110px 1fr auto; gap: 16px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); }
+.row-time { font-variant-numeric: tabular-nums; font-weight: 600; }
+.row-main strong { display: block; }
+.row-main span { color: var(--muted); font-size: 14px; display: block; }
+.row-main a { color: var(--sage-deep); }
+.row.cancelled { opacity: .5; }
+.row.cancelled .row-time { text-decoration: line-through; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #F1ECE5; color: var(--muted); margin-left: 6px; font-weight: 500; }
+
+.btn-danger { border: 1px solid var(--line-strong); background: none; color: var(--danger); min-height: 40px; padding: 0 16px; border-radius: 999px; font: 500 13px var(--sans); cursor: pointer; }
+.btn-danger:hover { border-color: var(--danger); }
+
+.block-form { grid-template-columns: repeat(4, 1fr); margin-top: 8px; }
+.empty { color: var(--muted); padding: 16px 0 0; margin: 0; }
+
+@media (max-width: 700px) {
+  .row { grid-template-columns: 1fr auto; }
+  .row-time { grid-column: 1 / -1; }
+  .block-form { grid-template-columns: 1fr 1fr; }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Foglalások – Zsófi Masszázs</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;500;600&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin">
+  <header class="admin-head">
+    <div class="container admin-head-inner">
+      <a href="./" class="brand"><span class="brand-text"><span class="brand-name">Zsófi</span><span class="brand-sub">foglalások kezelése</span></span></a>
+      <button type="button" class="btn btn-ghost btn-sm" id="logout" hidden>Kilépés</button>
+    </div>
+  </header>
+
+  <main class="container admin-main">
+    <!-- Belépés -->
+    <form class="card login" id="loginForm">
+      <h1>Belépés</h1>
+      <label class="field">
+        <span>Jelszó</span>
+        <input type="password" name="password" autocomplete="current-password" required>
+      </label>
+      <p class="form-error" id="loginError" role="alert"></p>
+      <button class="btn btn-primary btn-block">Belépés</button>
+    </form>
+
+    <div id="dashboard" hidden>
+      <section class="card">
+        <div class="card-head">
+          <h2>Közelgő foglalások</h2>
+          <label class="check small"><input type="checkbox" id="showPast"><span>Korábbiak és lemondottak is</span></label>
+        </div>
+        <div id="bookingList"></div>
+      </section>
+
+      <section class="card">
+        <h2>Időpont letiltása</h2>
+        <p class="muted">Szabadság, magánprogram vagy telefonos foglalás esetén. Üresen hagyott időkkel az egész nap letiltásra kerül.</p>
+        <form id="blockForm" class="field-grid block-form">
+          <label class="field"><span>Nap</span><input type="date" name="date" required></label>
+          <label class="field"><span>Mettől</span><input type="time" name="start" step="1800"></label>
+          <label class="field"><span>Meddig</span><input type="time" name="end" step="1800"></label>
+          <label class="field"><span>Megjegyzés</span><input type="text" name="reason" maxlength="120" placeholder="pl. Szabadság"></label>
+          <div class="field-full"><button class="btn btn-primary">Letiltás</button></div>
+        </form>
+        <p class="form-error" id="blockError" role="alert"></p>
+        <div id="blockList"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/schedule.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
