@@ -2,3 +2,4 @@ node_modules/
 data/
 .env
 !.claude/skills/ui-ux-pro-max/data/
+.cto-toolkit/
