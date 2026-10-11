@@ -1,5 +1,5 @@
 node_modules/
 data/
 .env
-!.claude/skills/ui-ux-pro-max/data/
+!.claude/skills/*/data/
 .cto-toolkit/
