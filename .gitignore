@@ -1,3 +1,6 @@
 node_modules/
 data/
 .env
+!.claude/skills/*/data/
+.cto-toolkit/
+__pycache__/
